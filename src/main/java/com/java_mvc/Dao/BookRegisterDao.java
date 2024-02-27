@@ -1,27 +1,23 @@
-package com.java_mvc;
+package com.java_mvc.Dao;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-public class RegisterDao {
-	public static boolean Register(String bookname,String bookedition,Float bookprice) {
+public class BookRegisterDao {
+	public static boolean register(String bookname,String bookedition,Float bookprice,Connection con) {
 		
 		boolean status=false;  
+		
 
-		
-		
+
+
 		 final String query="INSERT INTO BookData(BookName,BookEdition,BookPrice) VALUES(?,?,?)";
-		    
-			try {
-				Class.forName("com.mysql.cj.jdbc.Driver");
-			}catch(ClassNotFoundException se){
-				se.printStackTrace();
-			}
 		  //generate the connection
-		  		try(Connection con =DriverManager.getConnection("jdbc:mysql://localhost:3306/servlet","meriam","123456789");
-		  				PreparedStatement ps = con.prepareStatement(query);){
+		  		try {
+		  			
+		  			      
+		  				PreparedStatement ps = con.prepareStatement(query);
 		  				ps.setString(1, bookname);
 		  				ps.setString(2, bookedition);
 		  				ps.setFloat(3, bookprice);
@@ -47,6 +43,7 @@ public class RegisterDao {
 		  		return status;
 			
 	}
+	
 	
 	
 }

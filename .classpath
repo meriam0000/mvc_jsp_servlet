@@ -14,5 +14,12 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="/home/meriam/Downloads/mysql-connector-java-8.0.22.jar"/>
+	<classpathentry kind="lib" path="/home/meriam/Downloads/jstl-1.2.jar"/>
+	<classpathentry kind="lib" path="/home/meriam/tomcat10/apache-tomcat-10.1.18/lib/servlet-api.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="https://jakarta.ee/specifications/servlet/6.0/apidocs/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/meriam/Downloads/jar_files (1)/jakarta.servlet.jsp.jstl-2.0.0.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
